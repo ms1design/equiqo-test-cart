@@ -17,6 +17,8 @@ import configureStore from './store/configureStore';
 import { setRuntimeVariable } from './actions/runtime';
 import config from './config';
 
+import products from './mock/data.json';
+
 const app = express();
 
 //
@@ -37,6 +39,13 @@ app.use(bodyParser.json());
 if (__DEV__) {
   app.enable('trust proxy');
 }
+
+app.post('/api/products', async (req, res) =>
+  res
+    .type('json')
+    .status(200)
+    .send(products),
+);
 
 //
 // Register server-side rendering middleware

@@ -180,3 +180,13 @@ textarea {
     page-break-after: avoid;
   }
 }
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flexible {
+  flex-grow: 1;
+}

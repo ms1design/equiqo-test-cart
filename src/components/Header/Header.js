@@ -11,7 +11,7 @@ class Header extends React.Component {
         <div className={s.container}>
           <Navigation />
           <Link className={s.brand} to="/">
-            <span className={s.brandTxt}>Esquito Cart</span>
+            <span>Esquito Checkout</span>
           </Link>
         </div>
       </div>

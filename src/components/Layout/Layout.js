@@ -15,9 +15,9 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={s.flexContainer}>
         <Header />
-        {this.props.children}
+        <section className={s.flexible}>{this.props.children}</section>
         <Footer />
       </div>
     );

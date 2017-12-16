@@ -34,7 +34,6 @@
     "express": "^4.15.3",
     "history": "^4.6.3",
     "isomorphic-style-loader": "^4.0.0",
-    "isomorphic-style-loader-fork": "github:hoang17/isomorphic-style-loader",
     "node-fetch": "^1.7.1",
     "normalize.css": "^7.0.0",
     "pretty-error": "^2.1.1",
@@ -48,6 +47,7 @@
     "redux-thunk": "^2.2.0",
     "serialize-javascript": "^1.3.0",
     "source-map-support": "^0.4.15",
+    "text-ellipsis": "^1.0.3",
     "universal-router": "^3.2.0",
     "whatwg-fetch": "^2.0.3"
   },

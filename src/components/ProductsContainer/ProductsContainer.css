@@ -1,0 +1,25 @@
+@import '../variables.css';
+
+.productsContainer {
+  display: grid;
+  max-width: var(--max-grid-width);
+  margin: 1em auto;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 200px);
+  grid-gap: 1em;
+  justify-items: stretch;
+  justify-content: center;
+  grid-auto-flow: row;
+}
+
+@media screen and (max-width: 860px) {
+  .productsContainer {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .productsContainer {
+    grid-template-columns: 100%;
+  }
+}

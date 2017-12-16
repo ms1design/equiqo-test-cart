@@ -17,7 +17,7 @@ import configureStore from './store/configureStore';
 import { setRuntimeVariable } from './actions/runtime';
 import config from './config';
 
-import products from './mock/data.json';
+import productsData from './mock/data.json';
 
 const app = express();
 
@@ -44,7 +44,7 @@ app.post('/api/products', async (req, res) =>
   res
     .type('json')
     .status(200)
-    .send(products),
+    .send(productsData),
 );
 
 //
@@ -60,8 +60,11 @@ app.get('*', async (req, res, next) => {
       cookie: req.headers.cookie,
     });
 
+    console.info(typeof productsData, productsData);
+
     const initialState = {
       user: req.user || null,
+      cart: [],
     };
 
     const store = configureStore(initialState, {

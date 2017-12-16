@@ -20,8 +20,6 @@ const context = {
   // https://github.com/kriasoft/isomorphic-style-loader
   insertCss: (...styles) => {
     // eslint-disable-next-line no-underscore-dangle
-    styles.map(x => console.info(x._getContent()[0]));
-    // eslint-disable-next-line no-underscore-dangle
     const removeCss = styles.map(x => x._insertCss());
     return () => {
       removeCss.forEach(f => f());

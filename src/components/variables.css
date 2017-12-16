@@ -3,13 +3,21 @@
    * Typography
    * ======================================================================== */
 
-  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+  --font-family-base: BlinkMacSystemFont, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  /*
+   * Colors
+   * ======================================================================== */
+
+  --color-brand: #00aab0;
+  --color-text: #000;
 
   /*
    * Layout
    * ======================================================================== */
 
   --max-content-width: 1000px;
+  --max-grid-width: 860px;
 
   /*
    * Media queries breakpoints

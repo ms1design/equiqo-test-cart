@@ -1,11 +1,7 @@
 @import '../variables.css';
 
-:root {
-  --brand-color: #61dafb;
-}
-
 .root {
-  background: #373277;
+  background: color(var(--color-brand));
   color: #fff;
 }
 
@@ -16,9 +12,9 @@
 }
 
 .brand {
-  color: color(var(--brand-color));
+  color: #fff;
   text-decoration: none;
-  font-size: 1.75em; /* ~28px */
+  font-size: 1.5em;
 
   > span {
     font-size: 1em;

@@ -103,7 +103,7 @@ const config = {
           // Convert CSS into JS module
           {
             issuer: { not: [reStyle] },
-            use: 'isomorphic-style-loader-fork',
+            use: 'isomorphic-style-loader',
           },
 
           // Process external/third-party styles

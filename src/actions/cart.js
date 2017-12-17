@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import { ADD_PRODUCT_TO_CART } from '../constants';
+import { ADD_PRODUCT_TO_CART, CHECKOUT } from '../constants';
 
 export function addProductToCart({ value }) {
   return {
@@ -8,5 +8,12 @@ export function addProductToCart({ value }) {
     payload: {
       value,
     },
+  };
+}
+
+export function checkout() {
+  return {
+    type: CHECKOUT,
+    payload: {},
   };
 }

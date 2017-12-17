@@ -1,17 +1,16 @@
-import { ADD_PRODUCT_TO_CART } from '../constants';
+import { ADD_PRODUCT_TO_CART, CHECKOUT } from '../constants';
 
-export default function cart(state = [], action) {
+export default function cart(state = {}, action) {
   switch (action.type) {
     case ADD_PRODUCT_TO_CART:
-      console.info(action.type, {
-        _action: action,
-        _state: state,
-      });
-      // return {
-      //   ...state,
-      //   cart: action.payload.value,
-      // };
-      return state;
+      state[Object.keys(state).length + 1] = action.payload.value;
+      return {
+        ...state,
+      };
+    case CHECKOUT:
+      return {
+        ...{},
+      };
     default:
       return state;
   }

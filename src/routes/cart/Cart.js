@@ -1,16 +1,24 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import CartContainer from '../../components/CartContainer/CartContainer';
 import withStyles from '../../../tools/lib/withStyles';
 import s from './Cart.css';
 
 class Cart extends React.Component {
-  // static propTypes = {
-  // };
+  static propTypes = {
+    items: PropTypes.objectOf(
+      PropTypes.shape({
+        product: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        description: PropTypes.string.isRequired,
+      }).isRequired,
+    ).isRequired,
+  };
 
   render() {
     return (
       <div className={s.root}>
-        <h1>CART</h1>
+        <CartContainer items={this.props.items} />
       </div>
     );
   }

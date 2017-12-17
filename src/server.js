@@ -60,11 +60,9 @@ app.get('*', async (req, res, next) => {
       cookie: req.headers.cookie,
     });
 
-    console.info(typeof productsData, productsData);
-
     const initialState = {
       user: req.user || null,
-      cart: [],
+      cart: {},
     };
 
     const store = configureStore(initialState, {

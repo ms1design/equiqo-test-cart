@@ -1,8 +1,8 @@
 @import '../variables.css';
 
 .root {
-  background: color(var(--color-brand));
-  color: #fff;
+  /* background: color(var(--color-brand)); */
+  color: var(--color-brand);
 }
 
 .container {
@@ -12,7 +12,7 @@
 }
 
 .brand {
-  color: #fff;
+  color: var(--color-brand);
   text-decoration: none;
   font-size: 1.5em;
 

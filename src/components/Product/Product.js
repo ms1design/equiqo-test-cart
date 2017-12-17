@@ -11,10 +11,11 @@ class Product extends React.Component {
       price: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
     }).isRequired,
+    onBuy: PropTypes.func.isRequired,
   };
 
   render() {
-    const { data } = this.props;
+    const { data, onBuy } = this.props;
     const desc = ellipsis(data.description, 100);
     return (
       <div className={s.product}>
@@ -27,7 +28,15 @@ class Product extends React.Component {
         <p>{desc}</p>
         <div className={s.footer}>
           <span className={s.price}>{data.price}</span>
-          <button className={s.buyButton}>Kup</button>
+          <button
+            className={s.buyButton}
+            onClick={e => {
+              e.preventDefault();
+              onBuy(data);
+            }}
+          >
+            Buy
+          </button>
         </div>
       </div>
     );

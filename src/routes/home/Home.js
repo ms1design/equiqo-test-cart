@@ -11,7 +11,7 @@ class Home extends React.Component {
         product: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
         description: PropTypes.string.isRequired,
-      }).isRequired,
+      }),
     ).isRequired,
   };
 

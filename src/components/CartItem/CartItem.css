@@ -29,3 +29,7 @@
   box-sizing: border-box;
 }
 
+.qty {
+  display: inline-block;
+  box-sizing: border-box;
+}

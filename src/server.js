@@ -62,7 +62,7 @@ app.get('*', async (req, res, next) => {
 
     const initialState = {
       user: req.user || null,
-      cart: {},
+      cart: [],
     };
 
     const store = configureStore(initialState, {

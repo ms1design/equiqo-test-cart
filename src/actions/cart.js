@@ -14,6 +14,5 @@ export function addProductToCart({ value }) {
 export function checkout() {
   return {
     type: CHECKOUT,
-    payload: {},
   };
 }

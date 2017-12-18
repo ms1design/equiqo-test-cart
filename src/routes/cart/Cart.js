@@ -6,7 +6,7 @@ import s from './Cart.css';
 
 class Cart extends React.Component {
   static propTypes = {
-    items: PropTypes.objectOf(
+    items: PropTypes.arrayOf(
       PropTypes.shape({
         product: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,

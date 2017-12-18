@@ -10,16 +10,9 @@ class CartItem extends React.Component {
       product: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
       description: PropTypes.string.isRequired,
+      qty: PropTypes.number.isRequired,
     }).isRequired,
   };
-
-  componentDidEnter() {
-    console.info(this, 'componentDidEnter');
-  }
-
-  componentWillLeave(callback) {
-    console.info(this, 'componentWillLeave');
-  }
 
   render() {
     const { data } = this.props;
@@ -31,7 +24,8 @@ class CartItem extends React.Component {
           className={s.thumbnail}
         />
         <span className={s.name}>{data.product}</span>
-        <span className={s.desc}>{ellipsis(data.description, 200)}</span>
+        <span className={s.desc}>{ellipsis(data.description, 60)}</span>
+        <span className={s.qty}>{data.qty}</span>
         <span className={s.price}>{data.price}</span>
       </div>
     );
